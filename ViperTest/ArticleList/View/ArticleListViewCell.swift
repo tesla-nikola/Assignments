@@ -24,9 +24,12 @@ class ArticleListViewCell: UITableViewCell {
         // Configure the view for the selected state
     }
 	
+	override func prepareForReuse() {
+	}
+	
 	func fillWithData(article: Datum) {
 		if article.featuredImage.count > 0 {
-			featuredImage.imageFromServerURL(article.featuredImage.first!.imageFile, placeHolder: nil)
+			featuredImage.imageFromServerURL(article.featuredImage.first!.imageFile, placeHolder: UIImage(named: "placeholder"))
 		} else {
 			//no image
 		}
