@@ -14,7 +14,12 @@ class ArticleListViewCell: UITableViewCell {
 	@IBOutlet weak var authorsLbl: UILabel!
     @IBOutlet weak var dateLbl: UILabel!
     @IBOutlet weak var enclosedView: UIView!
-    
+	@IBOutlet weak var isFeaturedArticle: UIImageView!
+	@IBOutlet weak var tagLbl: UILabel!
+	@IBOutlet weak var listTagsLbl: UILabel!
+	@IBOutlet weak var regionLbl: UILabel!
+	@IBOutlet weak var listRegionLbl: UILabel!
+	
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
@@ -49,6 +54,34 @@ class ArticleListViewCell: UITableViewCell {
 			authorsLbl.text = ""
 		}
         dateLbl.text = dateToString(date: article.publishDate)
+		
+		if article.featuredArticle {
+			isFeaturedArticle.isHidden = false
+		} else {
+			isFeaturedArticle.isHidden = true
+		}
+		
+		if article.tagList.count > 0 {
+			var tagString = ""
+			article.tagList.forEach({tagString +=  $0.title + "∙"})
+			listTagsLbl.text = String(tagString.dropLast())
+			tagLbl.isHidden = false
+			listTagsLbl.isHidden = false
+		} else {
+			tagLbl.isHidden = true
+			listTagsLbl.isHidden = true
+		}
+		
+		if article.regionList.count > 0 {
+			var regionString = ""
+			article.regionList.forEach({regionString +=  $0.name.rawValue + "∙"})
+			listRegionLbl.text = String(regionString.dropLast())
+			regionLbl.isHidden = false
+			listRegionLbl.isHidden = false
+		} else {
+			regionLbl.isHidden = true
+			listRegionLbl.isHidden = true
+		}
         
 	}
     

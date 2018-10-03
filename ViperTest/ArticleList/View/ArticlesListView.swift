@@ -15,11 +15,15 @@ class ArticlesListView: UIViewController, ArticlesListViewProtocol {
 	
 	var presenter: ArticlesListPresenterProtocol?
 	var data: [Datum] = []
+	var timer = Timer()
+
     // MARK: - View Life Cycle Methods
 	override func viewDidLoad() {
         super.viewDidLoad()
 		tableView.estimatedRowHeight = 140.0
 		loadArticles()
+		timer = Timer.scheduledTimer(timeInterval: 2.0, target: self, selector: #selector(reloadTableView), userInfo: nil, repeats: false)
+
     }
     
     override func viewDidLayoutSubviews() {
@@ -53,6 +57,12 @@ class ArticlesListView: UIViewController, ArticlesListViewProtocol {
 	func reloadData(data: ArticleFeedResponse) {
 		self.data = data.data
 		tableView.reloadData()
+	}
+	
+	@objc func reloadTableView() {
+		debugPrint("Reload tableview")
+		tableView.reloadData()
+		timer.invalidate()
 	}
 }
 
