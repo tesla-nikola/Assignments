@@ -12,10 +12,13 @@ class ArticleListViewCell: UITableViewCell {
 	@IBOutlet weak var featuredImage: UIImageView!
 	@IBOutlet weak var titleLbl: UILabel!
 	@IBOutlet weak var authorsLbl: UILabel!
-	
+    @IBOutlet weak var dateLbl: UILabel!
+    @IBOutlet weak var enclosedView: UIView!
+    
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
+        enclosedView.layer.cornerRadius = 5.0
     }
 
     override func setSelected(_ selected: Bool, animated: Bool) {
@@ -25,14 +28,16 @@ class ArticleListViewCell: UITableViewCell {
     }
 	
 	override func prepareForReuse() {
+        featuredImage.image = UIImage(named: "placeholder")
 	}
 	
 	func fillWithData(article: Datum) {
-		if article.featuredImage.count > 0 {
-			featuredImage.imageFromServerURL(article.featuredImage.first!.imageFile, placeHolder: UIImage(named: "placeholder"))
-		} else {
-			//no image
-		}
+        if article.featuredImage.count > 0 {
+            featuredImage.imageFromServerURL(article.featuredImage.first!.imageFile, placeHolder: UIImage(named: "placeholder"))
+        } else {
+            //no image
+            featuredImage.image = UIImage(named: "placeholder")
+        }
 		titleLbl.text = article.title
 		
 		if article.authors.count > 0 {
@@ -43,6 +48,14 @@ class ArticleListViewCell: UITableViewCell {
 			// no authors
 			authorsLbl.text = ""
 		}
+        dateLbl.text = dateToString(date: article.publishDate)
+        
 	}
+    
+    func dateToString(date: Date) -> String {
+        let dateFormatter = DateFormatter()
+        dateFormatter.dateFormat = "yyyy-MM-dd"
+        return dateFormatter.string(from:date)
+    }
 
 }

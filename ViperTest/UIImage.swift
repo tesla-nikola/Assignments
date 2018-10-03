@@ -10,14 +10,15 @@ import UIKit
 
 
 let imageCache = NSCache<NSString, UIImage>()
+typealias imageDownloadompletion = (_ image: UIImage?,_ error: Error?) -> Void
 
 extension UIImageView {
 	
-	func imageFromServerURL(_ URLString: String, placeHolder: UIImage?) {
+    func imageFromServerURL(_ URLString: String, placeHolder: UIImage?) {
 		
-		self.image = nil
+      self.image = nil
 		if let cachedImage = imageCache.object(forKey: NSString(string: URLString)) {
-			self.image = cachedImage
+            self.image = cachedImage
 			return
 		}
 		
@@ -27,16 +28,16 @@ extension UIImageView {
 				//print("RESPONSE FROM API: \(response)")
 				if error != nil {
 					print("ERROR LOADING IMAGES FROM URL: \(error)")
-					DispatchQueue.main.async {
-						self.image = placeHolder
-					}
+                    DispatchQueue.main.async {
+                        self.image = placeHolder
+                    }
 					return
 				}
 				DispatchQueue.main.async {
 					if let data = data {
 						if let downloadedImage = UIImage(data: data) {
 							imageCache.setObject(downloadedImage, forKey: NSString(string: URLString))
-							self.image = downloadedImage
+                            self.image = downloadedImage
 						}
 					}
 				}

@@ -4,6 +4,7 @@
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
+        <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14283.14"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -35,7 +36,7 @@
                                                     <rect key="frame" x="10" y="10" width="355" height="196"/>
                                                     <subviews>
                                                         <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" image="placeholder" translatesAutoresizingMaskIntoConstraints="NO" id="vTK-dJ-cri">
-                                                            <rect key="frame" x="0.0" y="0.0" width="355" height="98"/>
+                                                            <rect key="frame" x="3" y="3" width="349" height="95"/>
                                                         </imageView>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tOn-FN-DkZ">
                                                             <rect key="frame" x="5" y="108" width="345" height="24"/>
@@ -49,18 +50,36 @@
                                                             <nil key="textColor"/>
                                                             <nil key="highlightedColor"/>
                                                         </label>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4Nc-Ts-KAg">
+                                                            <rect key="frame" x="321.5" y="160" width="28.5" height="31"/>
+                                                            <fontDescription key="fontDescription" style="UICTFontTextStyleCaption2"/>
+                                                            <nil key="textColor"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="star" translatesAutoresizingMaskIntoConstraints="NO" id="CTF-kX-sG7">
+                                                            <rect key="frame" x="8" y="8" width="35" height="35"/>
+                                                            <constraints>
+                                                                <constraint firstAttribute="width" constant="35" id="F1t-kY-Ezh"/>
+                                                                <constraint firstAttribute="height" constant="35" id="on1-w0-Fem"/>
+                                                            </constraints>
+                                                        </imageView>
                                                     </subviews>
                                                     <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                     <constraints>
                                                         <constraint firstItem="l5Z-uO-ise" firstAttribute="leading" secondItem="tOn-FN-DkZ" secondAttribute="leading" id="1zd-eZ-s4E"/>
                                                         <constraint firstItem="tOn-FN-DkZ" firstAttribute="leading" secondItem="iGy-v5-78H" secondAttribute="leading" constant="5" id="HHQ-pB-k6k"/>
+                                                        <constraint firstAttribute="trailing" secondItem="4Nc-Ts-KAg" secondAttribute="trailing" constant="5" id="NnI-rs-VAm"/>
                                                         <constraint firstAttribute="bottom" secondItem="l5Z-uO-ise" secondAttribute="bottom" constant="41" id="PFd-ya-Lgg"/>
-                                                        <constraint firstAttribute="trailing" secondItem="vTK-dJ-cri" secondAttribute="trailing" id="TJr-Nb-JKX"/>
+                                                        <constraint firstAttribute="bottom" secondItem="4Nc-Ts-KAg" secondAttribute="bottom" constant="5" id="QKG-ic-hcY"/>
+                                                        <constraint firstAttribute="trailing" secondItem="vTK-dJ-cri" secondAttribute="trailing" constant="3" id="TJr-Nb-JKX"/>
+                                                        <constraint firstItem="4Nc-Ts-KAg" firstAttribute="top" secondItem="l5Z-uO-ise" secondAttribute="bottom" constant="5" id="cJ3-jj-Pxb"/>
                                                         <constraint firstItem="l5Z-uO-ise" firstAttribute="top" secondItem="tOn-FN-DkZ" secondAttribute="bottom" constant="5" id="duK-mt-Grj"/>
                                                         <constraint firstAttribute="trailing" secondItem="tOn-FN-DkZ" secondAttribute="trailing" constant="5" id="f6l-Gd-Jix"/>
-                                                        <constraint firstItem="vTK-dJ-cri" firstAttribute="leading" secondItem="iGy-v5-78H" secondAttribute="leading" id="qSK-i0-CkY"/>
+                                                        <constraint firstItem="CTF-kX-sG7" firstAttribute="leading" secondItem="iGy-v5-78H" secondAttribute="leading" constant="8" id="iSZ-mf-O3U"/>
+                                                        <constraint firstItem="vTK-dJ-cri" firstAttribute="leading" secondItem="iGy-v5-78H" secondAttribute="leading" constant="3" id="qSK-i0-CkY"/>
                                                         <constraint firstItem="tOn-FN-DkZ" firstAttribute="top" secondItem="vTK-dJ-cri" secondAttribute="bottom" constant="10" id="tFT-MY-fGS"/>
-                                                        <constraint firstItem="vTK-dJ-cri" firstAttribute="top" secondItem="iGy-v5-78H" secondAttribute="top" id="xQL-fF-djo"/>
+                                                        <constraint firstItem="CTF-kX-sG7" firstAttribute="top" secondItem="iGy-v5-78H" secondAttribute="top" constant="8" id="w1X-qV-Xiq"/>
+                                                        <constraint firstItem="vTK-dJ-cri" firstAttribute="top" secondItem="iGy-v5-78H" secondAttribute="top" constant="3" id="xQL-fF-djo"/>
                                                     </constraints>
                                                 </view>
                                             </subviews>
@@ -74,6 +93,8 @@
                                         </tableViewCellContentView>
                                         <connections>
                                             <outlet property="authorsLbl" destination="l5Z-uO-ise" id="NUN-EN-Wva"/>
+                                            <outlet property="dateLbl" destination="4Nc-Ts-KAg" id="vGg-31-uuq"/>
+                                            <outlet property="enclosedView" destination="iGy-v5-78H" id="Zb6-Hk-Qp2"/>
                                             <outlet property="featuredImage" destination="vTK-dJ-cri" id="gC7-db-TT7"/>
                                             <outlet property="titleLbl" destination="tOn-FN-DkZ" id="cjX-BP-n5A"/>
                                         </connections>
@@ -110,5 +131,6 @@
     </scenes>
     <resources>
         <image name="placeholder" width="300" height="168"/>
+        <image name="star" width="354.4615478515625" height="354.4615478515625"/>
     </resources>
 </document>
