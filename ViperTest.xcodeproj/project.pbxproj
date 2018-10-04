@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3F05ACCE21662C23006BDF84 /* ArticleTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F05ACCD21662C23006BDF84 /* ArticleTest.swift */; };
+		3F05ACD621662EAF006BDF84 /* AppDelegateTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F05ACD521662EAF006BDF84 /* AppDelegateTest.swift */; };
+		3F05ACD82166332C006BDF84 /* AppDependenciesTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F05ACD72166332C006BDF84 /* AppDependenciesTest.swift */; };
+		3F05ACDA2166357B006BDF84 /* RootWireframeTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F05ACD92166357B006BDF84 /* RootWireframeTest.swift */; };
 		3F903B192161F19F00BA8FD7 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F903B182161F19F00BA8FD7 /* AppDelegate.swift */; };
 		3F903B862161F19F00BA8FD7 /* AppDependencies.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F903B852161F19F00BA8FD7 /* AppDependencies.swift */; };
 		3F903B8A2161F19F00BA8FD7 /* RootWireframe.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F903B892161F19F00BA8FD7 /* RootWireframe.swift */; };
@@ -49,7 +53,23 @@
 		3F903C1921623A7500BA8FD7 /* UIImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F903C1821623A7500BA8FD7 /* UIImage.swift */; };
 /* End PBXBuildFile section */
 
+/* Begin PBXContainerItemProxy section */
+		3F05ACD021662C23006BDF84 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 3F903B0C2161F19F00BA8FD7 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 3F903B132161F19F00BA8FD7;
+			remoteInfo = ViperTest;
+		};
+/* End PBXContainerItemProxy section */
+
 /* Begin PBXFileReference section */
+		3F05ACCB21662C23006BDF84 /* ArticleTest.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ArticleTest.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		3F05ACCD21662C23006BDF84 /* ArticleTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArticleTest.swift; sourceTree = "<group>"; };
+		3F05ACCF21662C23006BDF84 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		3F05ACD521662EAF006BDF84 /* AppDelegateTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegateTest.swift; sourceTree = "<group>"; };
+		3F05ACD72166332C006BDF84 /* AppDependenciesTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDependenciesTest.swift; sourceTree = "<group>"; };
+		3F05ACD92166357B006BDF84 /* RootWireframeTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootWireframeTest.swift; sourceTree = "<group>"; };
 		3F903B142161F19F00BA8FD7 /* ViperTest.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ViperTest.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3F903B182161F19F00BA8FD7 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		3F903B852161F19F00BA8FD7 /* AppDependencies.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = AppDependencies.swift; path = AppDelegate/AppDependencies.swift; sourceTree = "<group>"; };
@@ -96,6 +116,13 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		3F05ACC821662C23006BDF84 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		3F903B112161F19F00BA8FD7 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -106,10 +133,23 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		3F05ACCC21662C23006BDF84 /* ArticleTest */ = {
+			isa = PBXGroup;
+			children = (
+				3F05ACCD21662C23006BDF84 /* ArticleTest.swift */,
+				3F05ACD521662EAF006BDF84 /* AppDelegateTest.swift */,
+				3F05ACD72166332C006BDF84 /* AppDependenciesTest.swift */,
+				3F05ACD92166357B006BDF84 /* RootWireframeTest.swift */,
+				3F05ACCF21662C23006BDF84 /* Info.plist */,
+			);
+			path = ArticleTest;
+			sourceTree = "<group>";
+		};
 		3F903B0B2161F19F00BA8FD7 = {
 			isa = PBXGroup;
 			children = (
 				3F903B162161F19F00BA8FD7 /* ViperTest */,
+				3F05ACCC21662C23006BDF84 /* ArticleTest */,
 				3F903B152161F19F00BA8FD7 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -118,6 +158,7 @@
 			isa = PBXGroup;
 			children = (
 				3F903B142161F19F00BA8FD7 /* ViperTest.app */,
+				3F05ACCB21662C23006BDF84 /* ArticleTest.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -350,6 +391,24 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
+		3F05ACCA21662C23006BDF84 /* ArticleTest */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 3F05ACD421662C24006BDF84 /* Build configuration list for PBXNativeTarget "ArticleTest" */;
+			buildPhases = (
+				3F05ACC721662C23006BDF84 /* Sources */,
+				3F05ACC821662C23006BDF84 /* Frameworks */,
+				3F05ACC921662C23006BDF84 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				3F05ACD121662C23006BDF84 /* PBXTargetDependency */,
+			);
+			name = ArticleTest;
+			productName = ArticleTest;
+			productReference = 3F05ACCB21662C23006BDF84 /* ArticleTest.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 		3F903B132161F19F00BA8FD7 /* ViperTest */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = 3F903BDF2161F1AE00BA8FD7 /* Build configuration list for PBXNativeTarget "ViperTest" */;
@@ -377,6 +436,10 @@
 				LastUpgradeCheck = 1000;
 				ORGANIZATIONNAME = "User-81-Mac";
 				TargetAttributes = {
+					3F05ACCA21662C23006BDF84 = {
+						CreatedOnToolsVersion = 10.0;
+						TestTargetID = 3F903B132161F19F00BA8FD7;
+					};
 					3F903B132161F19F00BA8FD7 = {
 						CreatedOnToolsVersion = 10.0;
 					};
@@ -396,11 +459,19 @@
 			projectRoot = "";
 			targets = (
 				3F903B132161F19F00BA8FD7 /* ViperTest */,
+				3F05ACCA21662C23006BDF84 /* ArticleTest */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		3F05ACC921662C23006BDF84 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		3F903B122161F19F00BA8FD7 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -415,6 +486,17 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		3F05ACC721662C23006BDF84 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3F05ACDA2166357B006BDF84 /* RootWireframeTest.swift in Sources */,
+				3F05ACD82166332C006BDF84 /* AppDependenciesTest.swift in Sources */,
+				3F05ACD621662EAF006BDF84 /* AppDelegateTest.swift in Sources */,
+				3F05ACCE21662C23006BDF84 /* ArticleTest.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		3F903B102161F19F00BA8FD7 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -460,6 +542,14 @@
 		};
 /* End PBXSourcesBuildPhase section */
 
+/* Begin PBXTargetDependency section */
+		3F05ACD121662C23006BDF84 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 3F903B132161F19F00BA8FD7 /* ViperTest */;
+			targetProxy = 3F05ACD021662C23006BDF84 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
 /* Begin PBXVariantGroup section */
 		3F903BD42161F19F00BA8FD7 /* Main.storyboard */ = {
 			isa = PBXVariantGroup;
@@ -480,6 +570,44 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
+		3F05ACD221662C24006BDF84 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = ArticleTest/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.cyberswift.ArticleTest;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/ViperTest.app/ViperTest";
+			};
+			name = Debug;
+		};
+		3F05ACD321662C24006BDF84 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = ArticleTest/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.cyberswift.ArticleTest;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/ViperTest.app/ViperTest";
+			};
+			name = Release;
+		};
 		3F903BDD2161F1AE00BA8FD7 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -635,6 +763,15 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		3F05ACD421662C24006BDF84 /* Build configuration list for PBXNativeTarget "ArticleTest" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				3F05ACD221662C24006BDF84 /* Debug */,
+				3F05ACD321662C24006BDF84 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		3F903B0F2161F19F00BA8FD7 /* Build configuration list for PBXProject "ViperTest" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (

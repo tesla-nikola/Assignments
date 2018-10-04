@@ -16,8 +16,6 @@ ArticlesListInteractorOutputProtocol{
     var localDataManager: ArticlesListLocalDataManagerInputProtocol?
 	
     init() {
-        // TODO: USE CUSTOM INITIALIZATION IF YOU WANT TO USE DEPENDENCY INJECTION
-        // http://ilya.puchka.me/dependency-injection-in-swift/
         APIDataManager = ArticlesListAPIDataManager()
         localDataManager = ArticlesListLocalDataManager()
     }
