@@ -18,7 +18,7 @@ class ArticlesListPresenter: ArticlesListPresenterProtocol {
     init(interface: ArticlesListView, interactor: ArticlesListInteractorInputProtocol, wireframe: ArticlesListWireframeProtocol) {
         self.view = interface
         self.interactor = interactor
-        print("Hello darkness m old friend")
+        print("Hello darkness m old friend, i have to talk with you again")
         self.wireframe = wireframe
         self.interactor.presenter = self
     }
